@@ -1,0 +1,32 @@
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    min-height: 620px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.join-now {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.join-now:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,44 @@
+.header-container {
+    background-color: #1b1a1a;
+    padding: 20px;
+    color: white;
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.Log-in-button {
+    background-color: #4f5153;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Log-in-button:hover {
+    background-color: #2d3f53;
+}

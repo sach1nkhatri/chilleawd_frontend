@@ -1,0 +1,22 @@
+.my-services-section {
+    background-color: #191a15;
+    color: #fff;
+    padding: 60px 20px;
+    border-radius: 20px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    max-width: 500px;
+    margin: 20px;
+}
+
+.service-image {
+    width: 100%;
+    border-radius: 20px;
+}

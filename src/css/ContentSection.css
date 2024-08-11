@@ -1,0 +1,33 @@
+.content-section {
+    background-color: #171815; /* Dark background */
+    color: #fff; /* White text */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 60px 20px; /* Padding for spacing */
+    border-radius: 20px; /* Rounded corners */
+}
+
+.content-buttons {
+    display: flex;
+    justify-content: space-around; /* Space out buttons evenly */
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+}
+
+.content-item {
+    max-width: 300px; /* Limit the width of content items */
+    margin: 20px; /* Spacing around each item */
+    text-align: center; /* Center text inside items */
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; /* White text color */
+}
+
+.content-item img {
+    width: 100%; /* Ensure images fit within their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular images */
+}
+
+.video-frame {
+    width: 100%; /* Ensure video frame fits within its container */
+    height: auto; /* Maintain aspect ratio */
+}
