@@ -1,95 +1,28 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
 * {
     box-sizing: border-box;
 }
 
-.open-button {body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-    * {
-        box-sizing: border-box;
-    }
-
-    .form-popup {
-        display: none; /* Initially hidden */
-        position: fixed;
-        bottom: 15px;
-        right: 15px;
-        z-index: 9;
-        background-color: white;
-        padding: 10px;
-        border-radius: 10px;
-    }
-
-    .form-container {
-        max-width: 300px;
-        padding: 10px;
-        background-color: white;
-        border-radius: 10px;
-    }
-
-    .form-container input[type=text], .form-container input[type=password] {
-        width: 100%;
-        padding: 15px;
-        margin: 5px 0 22px 0;
-        border: none;
-        background: #f1f1f1;
-    }
-
-    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-        background-color: #ddd;
-        outline: none;
-    }
-
-    .form-container .btn {
-        background-color: #04AA6D;
-        color: white;
-        padding: 16px 20px;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-        margin-bottom: 10px;
-        opacity: 0.8;
-        border-radius: 5px;
-    }
-
-    .form-container .cancel {
-        background-color: red;
-    }
-
-    .form-container .btn:hover, .form-popup .btn:hover {
-        opacity: 1;
-    }
-
-    background-color: #555;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
-}
-
 .form-popup {
-    display: block; /* Initially hidden */
+    display: block; /* Ensures the form is visible when rendered */
     position: fixed;
-    bottom: 0;
+    bottom: 15px;
     right: 15px;
     z-index: 9;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better visibility */
 }
 
 .form-container {
     max-width: 300px;
     padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 30px;
     background-color: white;
+    border-radius: 10px;
 }
 
 .form-container input[type=text], .form-container input[type=password] {
@@ -102,7 +35,7 @@ body {
 
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
     background-color: #ddd;
-    outline: black;
+    outline: none;
 }
 
 .form-container .btn {
@@ -114,6 +47,7 @@ body {
     width: 100%;
     margin-bottom: 10px;
     opacity: 0.8;
+    border-radius: 5px;
 }
 
 .form-container .cancel {
@@ -139,7 +73,7 @@ body {
 }
 
 .create-account-text a {
-    color: #090909; /* Green color for the link */
+    color: #090909; /* Link color */
     text-decoration: none;
 }
 

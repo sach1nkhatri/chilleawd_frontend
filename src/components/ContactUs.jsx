@@ -16,7 +16,7 @@ function ContactUs() {
         const contactData = { name, email, message };
 
         try {
-            const response = await fetch('http://localhost:8081/api/contacts', {
+            const response = await fetch('http://localhost:8080/api/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
