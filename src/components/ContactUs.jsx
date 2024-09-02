@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { database } from '../firebaseConfig'; // Import the database object from firebaseConfig
+import { ref, set } from "firebase/database"; // Import Realtime Database functions
 import '../css/ContactUsSection.css';
 
 function ContactUs() {
@@ -16,23 +18,13 @@ function ContactUs() {
         const contactData = { name, email, message };
 
         try {
-            const response = await fetch('http://localhost:8080/api/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(contactData),
-            });
+            // Save contact data in Firebase Realtime Database using email as the primary key
+            await set(ref(database, 'contacts/' + email.replace(/\./g, ',')), contactData);
 
-            if (response.ok) {
-                alert('Message sent successfully');
-                setName('');
-                setEmail('');
-                setMessage('');
-            } else {
-                const errorText = await response.text();
-                setError(`Failed to send message: ${errorText}`);
-            }
+            alert('Message sent successfully');
+            setName('');
+            setEmail('');
+            setMessage('');
         } catch (error) {
             console.error('Error:', error);
             setError(`An error occurred: ${error.message}`);
