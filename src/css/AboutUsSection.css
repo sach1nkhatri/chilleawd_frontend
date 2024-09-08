@@ -43,3 +43,23 @@
 .slider-image.active {
     opacity: 1; /* Show the active image */
 }
+@media (max-width: 768px) {
+    .about-us-content {
+        flex-direction: column; /* Stack items vertically on mobile */
+        text-align: center; /* Center align text */
+    }
+
+    .about-us-text {
+        max-width: 100%; /* Use full width on smaller screens */
+        text-align: center;
+    }
+
+    .about-us-slider {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .slider-image {
+        max-width: 100%;
+        right: 0; /* Center the image for smaller screens */
+    }
+}

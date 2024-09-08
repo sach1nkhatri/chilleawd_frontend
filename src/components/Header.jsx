@@ -5,9 +5,11 @@ import PopupForm from './PopupForm';
 
 function Header() {
     const [isFormVisible, setIsFormVisible] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const openForm = () => setIsFormVisible(true);
     const closeForm = () => setIsFormVisible(false);
+    const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
     return (
         <header className="header-container">
@@ -15,7 +17,10 @@ function Header() {
                 <img src={logo} alt="Chillie AudioWorks" />
                 <h1>ChilliesAudioWorks</h1>
             </div>
-            <nav className="nav-links">
+            <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
+                ☰ {/* Hamburger icon */}
+            </div>
+            <nav className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
                 <a href="#home">Home</a>
                 <a href="#about-us">About Us</a>
                 <a href="#my-services">Our Services</a>

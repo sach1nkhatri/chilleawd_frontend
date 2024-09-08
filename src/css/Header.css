@@ -8,8 +8,16 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 25px;
+    flex-wrap: wrap;
+    height: auto;
+    transition: all 0.3s ease;
 }
+.Log-in-button {
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 15px;
 
+}
 .logo-title {
     display: flex;
     align-items: center;
@@ -18,27 +26,50 @@
 .logo-title img {
     height: 50px;
     margin-right: 10px;
+    transition: height 0.3s ease;
 }
 
+/* Default styles for larger screens */
 .nav-links {
-    display: flex;
-    gap: 15px;
+    display: flex; /* Show nav links on larger screens */
+    gap: 15px; /* Space between links */
+    transition: font-size 0.3s ease;
 }
 
 .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
+    color: white; /* White text for nav links */
+    text-decoration: none; /* No underline for links */
+    font-size: 18px; /* Adjust font size as needed */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.Log-in-button {
-    background-color: #4f5153;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+.nav-links a:hover {
+    color: #ddd; /* Light gray color on hover */
 }
 
-.Log-in-button:hover {
-    background-color: #2d3f53;
+/* Mobile menu icon */
+.mobile-menu-icon {
+    display: none; /* Hide the mobile menu icon by default */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block; /* Show mobile menu icon on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.open {
+        display: flex; /* Show the nav links when mobile menu is toggled */
+    }
+
+    .Log-in-button {
+        margin-top: 10px;
+        width: 100%; /* Full width login button on mobile */
+    }
 }
