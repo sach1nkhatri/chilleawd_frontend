@@ -29,5 +29,6 @@
 
 .video-frame {
     width: 100%; /* Ensure video frame fits within its container */
-    height: auto; /* Maintain aspect ratio */
+    height: 250px; /* Maintain aspect ratio */
+    border-radius: 10%;
 }
